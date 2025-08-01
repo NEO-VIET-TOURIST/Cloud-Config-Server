@@ -18,5 +18,11 @@ spring:
   application:
     name: interaction-service
 
+  datasource:
+    url: jdbc:postgresql://localhost:5433/interaction_db
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+
 server:
   port: 8084
