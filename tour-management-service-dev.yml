@@ -18,5 +18,14 @@ spring:
   application:
     name: tour-management-service
 
+  datasource:
+    url: jdbc:postgresql://localhost:5436/tour_management_db
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+
+  liquibase:
+    change-log: classpath:db/changelog/db.changelog-master.xml
+
 server:
   port: 8086
