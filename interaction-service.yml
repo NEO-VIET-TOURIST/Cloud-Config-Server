@@ -24,5 +24,8 @@ spring:
     password: postgres
     driver-class-name: org.postgresql.Driver
 
+  liquibase:
+    change-log: classpath:db/changelog/db.changelog-master.xml    
+
 server:
   port: 8084
