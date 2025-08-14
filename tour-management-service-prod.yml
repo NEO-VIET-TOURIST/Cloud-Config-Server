@@ -19,7 +19,7 @@ spring:
     name: tour-management-service
 
   datasource:
-    url: jdbc:postgresql://localhost:5436/tour_management_db
+    url: jdbc:postgresql://localhost:5436/tour_management_db?serverTimezone=Asia/Ho_Chi_Minh
     username: postgres
     password: postgres
     driver-class-name: org.postgresql.Driver
