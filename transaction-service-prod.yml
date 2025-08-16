@@ -17,11 +17,30 @@ logging:
 spring:
   application:
     name: transaction-service
+    time-zone: Asia/Ho_Chi_Minh
+
+    
   datasource:
-    url: jdbc:postgresql://localhost:5437/transaction_db?TimeZone=UTC
+    url: jdbc:postgresql://localhost:5437/transaction_db
     username: postgres
     password: postgres
     driver-class-name: org.postgresql.Driver
+    hikari:
+      maximum-pool-size: 20
+      minimum-idle: 5
+      idle-timeout: 300000
+      max-lifetime: 600000
+      connection-timeout: 20000
+      leak-detection-threshold: 60000
+      pool-name: TransactionServiceHikariCP
+
+  # Jackson Configuration
+  jackson:
+    time-zone: Asia/Ho_Chi_Minh
+    date-format: yyyy-MM-dd HH:mm:ss
+    serialization:
+      write-dates-as-timestamps: false
+
   liquibase:
     change-log: classpath:db/changelog/db.changelog-master.xml
     enabled: true
