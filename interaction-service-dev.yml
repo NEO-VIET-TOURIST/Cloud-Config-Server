@@ -19,7 +19,7 @@ spring:
     name: interaction-service
 
   datasource:
-    url: jdbc:postgresql://localhost:5434/interaction_db?serverTimezone=Asia/Ho_Chi_Minh
+    url: jdbc:postgresql://localhost:5434/interaction_db?serverTimezone=UTC
     username: postgres
     password: postgres
     driver-class-name: org.postgresql.Driver

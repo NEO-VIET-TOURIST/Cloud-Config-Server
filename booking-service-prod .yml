@@ -18,7 +18,7 @@ spring:
   application:
     name: booking-service
   datasource:
-    url: jdbc:postgresql://localhost:5432/booking_db?serverTimezone=Asia/Ho_Chi_Minh
+    url: jdbc:postgresql://localhost:5432/booking_db?serverTimezone=UTC
     username: postgres
     password: postgres
     driver-class-name: org.postgresql.Driver
