@@ -18,12 +18,10 @@ spring:
   application:
     name: transaction-service
   datasource:
-    url: jdbc:postgresql://localhost:5437/transaction_db?serverTimezone=UTC&useLegacyDatetimeCode=false&stringtype=unspecified
+    url: jdbc:postgresql://localhost:5437/transaction_db?serverTimezone=UTC
     username: postgres
     password: postgres
     driver-class-name: org.postgresql.Driver
-    hikari:
-      connection-init-sql: SET TIME ZONE 'Asia/Ho_Chi_Minh'
   liquibase:
     change-log: classpath:db/changelog/db.changelog-master.xml
     enabled: true
